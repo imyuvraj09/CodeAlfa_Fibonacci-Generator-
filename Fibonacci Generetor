@@ -1,0 +1,11 @@
+def fibonacci_generator():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+# Example usage:
+gen = fibonacci_generator()
+n = 10  # Number of Fibonacci numbers to generate
+for _ in range(n):
+    print(next(gen))
